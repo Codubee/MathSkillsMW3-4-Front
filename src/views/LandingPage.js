@@ -1,10 +1,12 @@
 import React from 'react';
+import NavigationBar from '../components/Navbar';
 
 function LandingPage() 
 {
   return (
         <div>
-            <h1>Hello world</h1>
+            <NavigationBar/>
+            <h1>Math App</h1>
         </div>
     )
 }
