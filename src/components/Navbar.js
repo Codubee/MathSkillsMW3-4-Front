@@ -25,7 +25,7 @@ const NavBar = (props) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">About</NavLink>
+              <NavLink href="">Study</NavLink>
             </NavItem>
             <NavItem> 
               <NavLink href="">Skill Level</NavLink>
