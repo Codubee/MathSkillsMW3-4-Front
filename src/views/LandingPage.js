@@ -1,11 +1,12 @@
 import React from 'react';
 import Team from '../components/Team';
+import Explanation from '../components/Explanation';
 
 function LandingPage() {
     return (
         <div>
-            <h1>Hello world</h1>
             <Team />
+            <Explanation />
         </div>
     )
 }
