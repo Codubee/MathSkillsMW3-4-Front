@@ -9,7 +9,7 @@ import {
   NavLink
 } from 'reactstrap';
 
-const NavigationBar = (props) => {
+const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -40,4 +40,4 @@ const NavigationBar = (props) => {
   );
 }
 
-export default NavigationBar;
+export default NavBar;

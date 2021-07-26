@@ -1,11 +1,11 @@
 import React from 'react';
-import NavigationBar from '../components/Navbar';
+import NavBar from '../components/Navbar';
 
 function LandingPage() 
 {
   return (
         <div>
-            <NavigationBar/>
+            <NavBar/>
             <h1>Math App</h1>
         </div>
     )
