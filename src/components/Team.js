@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Member from './Member';
+import '../styles/Team.css'
 
 function Team() {
     const frontEnd = [
@@ -77,7 +78,6 @@ function Team() {
             <h2>Front-End</h2>
             {frontEnd.map(m => <Member
                 name={m.name}
-                img="https://m.media-amazon.com/images/I/61U7aD1GDML._AC_SS450_.jpg"
                 img={m.img}
                 university={m.university}
                 level={m.level}

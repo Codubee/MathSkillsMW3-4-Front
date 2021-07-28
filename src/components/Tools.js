@@ -1,12 +1,12 @@
 import React from 'react'
-import '../components/Tools.css'
+import '../styles/Tools.css'
 
 /*Created the tools component with hyperlinks to the tools used*/
 function Tools(){
     return(
-        <div id = "Tools">
+        <div id = "Tools" className="text-center">
             Tools used to build this application:
-            <ul>
+            <ul className="tools-list">
                 <li><a href = "https://www.atlassian.com/software/jira">Jira</a></li>
                 <li><a href = "https://reactjs.org/">React</a></li>
                 <li><a href = "https://nodejs.org/en/">Node.js</a></li>

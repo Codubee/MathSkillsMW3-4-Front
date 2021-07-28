@@ -1,0 +1,11 @@
+/*Created the styling sheet for the Tools component*/
+#Tools{
+    padding: 20px;
+    font-size: 20px;
+   
+}
+
+
+.tools-list{
+    list-style: none;
+}

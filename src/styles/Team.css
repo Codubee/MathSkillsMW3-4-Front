@@ -1,0 +1,22 @@
+.Team {
+    background-color: #f7edcd;
+    text-align: center;
+}
+
+.Member {
+    vertical-align: top;
+    width: 17%;
+    height: 330px;
+    background-color: #8CCDB0;
+    display: inline-block;
+    margin: 1%;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.Member-img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 90%;
+}

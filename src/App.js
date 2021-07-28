@@ -1,15 +1,11 @@
 import './App.css';
-
-import Explanation from './components/Explanation';
+import Navigation from './components/Navigation'
 import LandingPage from './views/LandingPage';
-import NavBar from '../components/Navbar';
-import Features from './components/Features';
 
 function App() {
   return (
       <div>
-        <NavBar/>
-        <Features />
+        <Navigation/>
         <LandingPage />
       </div>
   );

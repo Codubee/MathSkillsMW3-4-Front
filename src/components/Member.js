@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Jocelyn from './imgs/jocelyn.jpg';
 
 class Member extends Component {
     static defaultProps = {
@@ -10,8 +9,6 @@ class Member extends Component {
     }
 
     render() {
-        console.log(this.props.img);
-        console.log({ Jocelyn });
         return (
             <div className="Member">
                 <img src={this.props.img} alt={this.props.name} className="Member-img" />
