@@ -1,10 +1,13 @@
 import React from 'react';
+import Tools from '../components/Tools'
+import Explanation from '../components/Explanation';
 
 function LandingPage() 
 {
   return (
         <div>
-            <h1>Hello world</h1>
+            <Tools/>
+            <Explanation />
         </div>
     )
 }
