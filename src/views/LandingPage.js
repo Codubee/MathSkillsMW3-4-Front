@@ -1,15 +1,17 @@
 import React from 'react';
+import Team from '../components/Team';
 import Tools from '../components/Tools'
 import Explanation from '../components/Explanation';
-import Weather from '../components/Weather';
+import { Container } from 'reactstrap';
 
 function LandingPage() {
     return (
-        <div>
-            <Tools />
+        <Container>
             <Explanation />
+            <Tools/>
+            <Team />
             <Weather />
-        </div>
+        </Container>
     )
 }
 
