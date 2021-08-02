@@ -1,13 +1,14 @@
 import React from 'react';
 import Tools from '../components/Tools'
 import Explanation from '../components/Explanation';
+import Weather from '../components/Weather';
 
-function LandingPage() 
-{
-  return (
+function LandingPage() {
+    return (
         <div>
-            <Tools/>
+            <Tools />
             <Explanation />
+            <Weather />
         </div>
     )
 }
