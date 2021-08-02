@@ -1,12 +1,15 @@
 import './App.css';
-import Navigation from './components/Navigation'
+import Explanation from './components/Explanation';
 import LandingPage from './views/LandingPage';
+import Math from './views/Math';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
       <div>
         <Navigation/>
         <LandingPage />
+        <Math/>
       </div>
   );
 }
