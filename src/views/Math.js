@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Buttons from '../components/Buttons';
 
 function Math (){
     return (
-        // Remove the h1 element below and place your component there
-        <h1>Hello world</h1>
+        <h1>
+            <Buttons/>
+        </h1>
     )
 }
 
