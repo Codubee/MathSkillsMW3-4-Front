@@ -5,9 +5,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink
+  NavItem
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,16 +22,16 @@ const Navigation = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <Link className="nav-link" to="/">Home</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="">Study</NavLink>
+              <Link className="nav-link" to="/study">Study</Link>
             </NavItem>
             <NavItem> 
-              <NavLink href="">Skill Level</NavLink>
+              <Link className="nav-link" to="/about">About</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/Codubee/MathSkillsMW3-4-Front">Github</NavLink>
+              <a className="nav-link" href="https://github.com/Codubee/MathSkillsMW3-4-Front" target="_blank">Github</a>
             </NavItem>
           </Nav>
         </Collapse>
