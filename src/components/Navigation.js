@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,16 +23,20 @@ const Navigation = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <Link className="nav-link" to="/">Home</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="">Study</NavLink>
+              <Link className="nav-link" to="/study">Study</Link>
             </NavItem>
             <NavItem> 
-              <NavLink href="">Skill Level</NavLink>
+              <Link className="nav-link" to="/skills">Skill Level</Link>
+            </NavItem>
+            <NavItem> 
+              <Link className="nav-link" to="/team">About Us</Link>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/Codubee/MathSkillsMW3-4-Front">Github</NavLink>
+              <Link className="nav-link" to="/github">Github</Link>
+              {/* <NavLink href="https://github.com/Codubee/MathSkillsMW3-4-Front">Github</NavLink> */}
             </NavItem>
           </Nav>
         </Collapse>
