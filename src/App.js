@@ -1,13 +1,14 @@
 import './App.css';
 
 import Explanation from './components/Explanation';
-//import LandingPage from './views/LandingPage';
+import LandingPage from './views/LandingPage';
 import Navigation from './components/Navigation';
 import Features from './components/Features';
 import Team from './components/Team'
 import Tools from './components/Tools'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Math from './views/Math';
 
 function App() {
   return (
@@ -16,22 +17,14 @@ function App() {
           <Navigation/>
           <Switch>
             <Route path="/study">
-              <div>
-                This is the main application page, <br/>
-                to be added to the site soon.
-              </div>
+              <Math/>
             </Route>
             <Route path="/about">
               <Team />
               <Tools/>
             </Route>
-            <Route path="/github" component={() => {
-              window.location.href = "https://github.com/Codubee/MathSkillsMW3-4-Front";
-              return null;
-            }}/>
             <Route exact path="/">
-              <Explanation/>
-              <Features />
+              <LandingPage/>
             </Route>
           </Switch>
         </div>
