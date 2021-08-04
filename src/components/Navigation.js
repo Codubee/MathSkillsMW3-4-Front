@@ -32,7 +32,7 @@ const Navigation = (props) => {
               <Link className="nav-link" to="/skills">Skill Level</Link>
             </NavItem>
             <NavItem> 
-              <Link className="nav-link" to="/team">About Us</Link>
+              <Link className="nav-link" to="/about">About</Link>
             </NavItem>
             <NavItem>
               <Link className="nav-link" to="/github">Github</Link>

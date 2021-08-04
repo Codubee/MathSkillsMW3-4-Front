@@ -5,6 +5,7 @@ import Explanation from './components/Explanation';
 import Navigation from './components/Navigation';
 import Features from './components/Features';
 import Team from './components/Team'
+import Tools from './components/Tools'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -20,8 +21,9 @@ function App() {
                 to be added to the site soon.
               </div>
             </Route>
-            <Route path="/team">
+            <Route path="/about">
               <Team />
+              <Tools/>
             </Route>
             <Route path="/github" component={() => {
               window.location.href = "https://github.com/Codubee/MathSkillsMW3-4-Front";
