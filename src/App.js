@@ -1,5 +1,4 @@
 import './App.css';
-
 import Explanation from './components/Explanation';
 import LandingPage from './views/LandingPage';
 import Navigation from './components/Navigation';
