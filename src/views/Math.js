@@ -1,11 +1,12 @@
 import React from 'react'
+import { Container } from 'reactstrap';
 import Buttons from '../components/Buttons';
 
 function Math (){
     return (
-        <h1>
+        <Container>
             <Buttons/>
-        </h1>
+        </Container>
     )
 }
 
