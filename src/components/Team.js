@@ -6,10 +6,10 @@ function Team() {
     const frontEnd = [
         {
             name: "Ayush",
-            img: "https://m.media-amazon.com/images/I/61U7aD1GDML._AC_SS450_.jpg",
+            img: "https://cdn.discordapp.com/attachments/869305525945368657/869318856454311956/IMG_20201128_215604_619.jpg",
             university: "University of Texas at Dallas",
-            level: "unknown level",
-            github: ""
+            level: "Junior",
+            github: "https://github.com/Ayush-Gopisetty"
         },
         {
             name: "Eduardo",
