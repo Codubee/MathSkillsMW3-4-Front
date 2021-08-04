@@ -1,10 +1,9 @@
 import React from 'react'
-
+import View from '../components/View'
 
 function Math (){
     return (
-        // Remove the h1 element below and place your component there
-        <h1>Hello world</h1>
+        <View/>
     )
 }
 
