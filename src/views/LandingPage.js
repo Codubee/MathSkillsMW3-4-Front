@@ -10,6 +10,7 @@ function LandingPage() {
             <Explanation />
             <Tools/>
             <Team />
+
         </Container>
     )
 }
