@@ -52,7 +52,7 @@ function Team() {
         {
             name: "Jesus",
             img: "https://cdn.discordapp.com/attachments/858807182206959649/869304728125861948/img_2.png",
-            university: "University of Texas at Dallas",
+            university: "University of Texas Rio Grande Valley",
             level: "Senior",
             github: "https://github.com/Martje55555"
         },
