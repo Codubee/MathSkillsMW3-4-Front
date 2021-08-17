@@ -8,11 +8,10 @@ import { Container } from 'reactstrap';
 function LandingPage() {
     return (
         <Container>
-            <Explanation />
+            <Explanation/>
             <Tools/>
             <Features/>
-            <Team />
-
+            <Team/>
         </Container>
     )
 }
