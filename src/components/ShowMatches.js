@@ -18,7 +18,7 @@ function ShowMatches(props) {
                 <tbody>
                     {
                         props.matches.map((question, id) => (
-                            <tr>
+                            <tr key={id}>
                                 <th>{question.problemId}</th>
                                 <td>{question.problem}</td>
                                 <td>{question.answer}</td>

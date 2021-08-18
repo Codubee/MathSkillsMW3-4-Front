@@ -1,8 +1,6 @@
 import './App.css';
-import Explanation from './components/Explanation';
 import LandingPage from './views/LandingPage';
 import Navigation from './components/Navigation';
-import Features from './components/Features';
 import Team from './components/Team'
 import Tools from './components/Tools'
 
