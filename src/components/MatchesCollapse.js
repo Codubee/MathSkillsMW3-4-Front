@@ -15,7 +15,7 @@ class MatchesCollapse extends React.Component {
     axios.get("https://mathskills-mw5-6-back.herokuapp.com/getMatches?userId=99")
       .then((response) => {
         this.setState({
-          matches: response.data
+          matches: response.data.matches
         })
       })
   }
