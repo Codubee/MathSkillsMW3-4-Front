@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import { Table } from 'reactstrap';
+import { Table,Button } from 'reactstrap';
 
 /* This component is a class needs to perform the task of displaying the matches and deleting the problems but calling
    the deleteProblem api*/
@@ -26,40 +26,43 @@ class ShowMatches extends React.Component {
         .then((response) => {
             //Prints the data to the console that is located in the web browser
             console.log(response.data);
+            alert('Entry Deleted. Please refresh.')
         })
     }
 
     //HTML is shown to the user
     render()
     {
-        //Creates a temporary array to test the ShowMatches function
-        const questions = [{problem:"2+2", answer:4},{problem:"3+3", answer:6}];
-
-        return (
-            //This setups a striped table which makes it easier to keep track of
-            <div>
+        if(this.props.matches.length > 0) {
+            return (
+                //This setups a striped table which makes it easier to keep track of
                 <Table striped>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Problem</th>
                             <th>Answer</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            questions.map((question, id) => (
-                                <tr>
-                                    <th scope="row">{id+=1}</th>
+                            this.props.matches.map((question, id) => (
+                                <tr key={id}>
+                                    <th>{question.problemId}</th>
                                     <td>{question.problem}</td>
                                     <td>{question.answer}</td>
+                                    <Button size="sm" onClick={this.triggerDeleteApi} >Delete</Button>
                                 </tr>
                             ))
                         }
                     </tbody>
                 </Table>
-                <button onClick={this.triggerDeleteApi}>Delete</button>
-            </div>
-        );
+            );
+        }
+        else {
+            return <></>
+        }
     }
 }
 

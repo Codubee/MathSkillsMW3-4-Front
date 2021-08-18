@@ -1,18 +1,51 @@
 import React from 'react'
-import { Container } from 'reactstrap';
+import { Container, Button } from 'reactstrap';
 import View from '../components/View'
-import ShowMatches from '../components/ShowMatches'
-import Buttons from '../components/Buttons';
 import MatchesCollapse from '../components/MatchesCollapse';
+import '../styles/Math.css'
+import axios from 'axios';
 
-function Math (){
-    return (
-        <Container>
-            <View/>
-            <Buttons/>
-            <MatchesCollapse/>
-        </Container>
-    )
+class Math extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleNo = this.handleNo.bind(this)
+        this.handleYes = this.handleYes.bind(this)
+    }
+
+    handleYes() {
+
+        let tempBody = { // temp value for getting from the db
+            "userId": "99",
+            "problem": { "problem": "5+2", "answer": "7", "problemId": "3" }
+        }
+        axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", tempBody)
+            .then(() => {
+                // alert("INDEED YES! posted: " + response.problem.problemId)
+            })
+    }
+
+    handleNo() {
+        alert('clicked no')
+    }
+
+    render() {
+        return (
+            <Container>
+                <View />
+                <div className="text-center" id="Buttons">
+                    <div className="header">
+                        Is this answer correct?
+                    </div>
+                    <div className="yNButton">
+                        <Button outline color="success" size="lg" onClick={this.handleYes} >YES</Button>
+                        <Button outline color="danger" size="lg" onClick={this.handleNo}>NO</Button>
+                    </div>
+                </div>
+                <MatchesCollapse />
+            </Container>
+        )
+    }
+
 }
 
 export default Math
