@@ -7,9 +7,9 @@ import axios from 'axios';
 
 let answerQuery = '5' // set this to a random number
 
-let resp =  { // temp value for getting from the db
+let response =  { // temp value for getting from the db
     "userId":"99",
-    "problem":{"problem":"5+2","answer":"4","problemId":"3"}
+    "problem":{"problem":"5+2","answer":"7","problemId":"3"}
 }
 
 class Math extends React.Component{
@@ -20,35 +20,35 @@ class Math extends React.Component{
     }
 
     handleYes(){
-        if (answerQuery !== resp.problem.answer) {
-            alert('INCORRECT! its wrong')
+        if (answerQuery !== response.problem.answer) {
+            // alert('INCORRECT! its wrong')
         }
         else {
-            axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", resp)
+            axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", response)
             .then(() => {
-            alert("INDEED YES! posted: " + resp.problem.problemId)
+            // alert("INDEED YES! posted: " + response.problem.problemId)
             })
             // get new problem
         }
     }
 
     handleNo(){
-        if (answerQuery !== resp.problem.answer) {
-            axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", resp)
+        if (answerQuery !== response.problem.answer) {
+            axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", response)
             .then(() => {
-            alert("INDEED NO! posted: " + resp.problem.problemId)
+            // alert("INDEED NO! posted: " + response.problem.problemId)
             })
             // get new problem
         }
         else {
-            alert('INCORRECT! its wrong')
+            // alert('INCORRECT! its wrong')
         }
     }
 
     render(){
         return (
             <Container>
-                <View answer={answerQuery} question={resp}/>
+                <View answer={answerQuery} question={response}/>
                 <div className="text-center" id="Buttons">
                     <div className = "header">
                         Is this answer correct?
