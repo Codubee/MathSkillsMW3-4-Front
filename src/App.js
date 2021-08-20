@@ -5,7 +5,7 @@ import Team from './components/Team'
 import Tools from './components/Tools'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Math from './views/Math';
+import MathPage from './views/MathPage';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Navigation/>
           <Switch>
             <Route path="/study">
-              <Math/>
+              <MathPage/>
             </Route>
             <Route path="/about">
               <Team />

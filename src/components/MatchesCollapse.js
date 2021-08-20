@@ -12,7 +12,7 @@ class MatchesCollapse extends React.Component {
   }
 
   getMatches(){
-    axios.get("https://mathskills-mw5-6-back.herokuapp.com/getMatches?userId=99")
+    axios.get("https://mathskills-mw5-6-back.herokuapp.com/getMatches?userId="+this.props.userId)
       .then((response) => {
         this.setState({
           matches: response.data.matches
@@ -30,7 +30,7 @@ class MatchesCollapse extends React.Component {
       <div className="text-center">
         <Button color="primary" onClick={this.setIsOpen} style={{ marginBottom: '1rem' }}>Toggle</Button>
         <Collapse isOpen={this.state.isOpen}>
-          <ShowMatches matches={this.state.matches}/>
+          <ShowMatches matches={this.state.matches} userId={this.props.userId}/>
         </Collapse>
       </div>
     );

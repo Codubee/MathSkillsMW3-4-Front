@@ -5,40 +5,60 @@ import MatchesCollapse from '../components/MatchesCollapse';
 import '../styles/Math.css'
 import axios from 'axios';
 
-class Math extends React.Component {
+class MathPage extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {problem: " "};
+        this.state = {problem: {},userId:Math.floor(Math.random() * 99999)};
         this.handleNo = this.handleNo.bind(this)
         this.handleYes = this.handleYes.bind(this)
+        this.getProblem = this.getProblem.bind(this)
     }
   
     componentDidMount(){
+        this.getProblem();
+    }
+
+    getProblem(){
         axios.get("https://mathskills-mw5-6-back.herokuapp.com/getProblem")
 
         .then((response) => {
-            console.log(response.data);
+
+            var random = Math.random();
+            console.log(random)
+            if(random >.5){
+                var problem = response.data
+                problem['answer'] = Math.floor(Math.random()*99);
+            }
 
             this.setState({
-                problem: response.data.problem
+                problem: response.data
             })
         })
     }
 
     handleYes() {
-
-        let tempBody = { // temp value for getting from the db
-            "userId": "99",
-            "problem": { "problem": "5+2", "answer": "7", "problemId": "3" }
-        }
-        axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", tempBody)
+        var question = eval(this.state.problem.problem);
+        var answer = this.state.problem.answer;
+        console.log(this.state.userId)
+        if(question === answer){
+            var body = {
+                userId: this.state.userId,
+                problem:this.state.problem
+            }
+            axios.post("https://mathskills-mw5-6-back.herokuapp.com/addProblem", body)
             .then(() => {
-                // alert("INDEED YES! posted: " + response.problem.problemId)
+                alert('Correct!')
+                this.getProblem();
             })
+        }else{
+            alert('incorrect')
+            this.getProblem()
+        }
+        
     }
 
     handleNo() {
-        alert('clicked no')
+        this.getProblem();
     }
 
     render() {
@@ -54,10 +74,10 @@ class Math extends React.Component {
                         <Button outline color="danger" size="lg" onClick={this.handleNo}>NO</Button>
                     </div>
                 </div>
-                <MatchesCollapse />
+                <MatchesCollapse userId={this.state.userId}/>
             </Container>
         )
     }
 }
 
-export default Math
+export default MathPage
