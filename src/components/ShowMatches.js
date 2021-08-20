@@ -17,10 +17,10 @@ class ShowMatches extends React.Component {
     //DELETE http request is sent
     //We get a response after the request is complete
     //Prints the data to the console that is located in the web browser
-    triggerDeleteApi()
+    triggerDeleteApi(problemId)
     {
         //DELETE http request is sent
-        axios.delete("https://mathskills-mw5-6-back.herokuapp.com/deleteProblem?userId=99&problemId=1")
+        axios.delete("https://mathskills-mw5-6-back.herokuapp.com/deleteProblem?userId="+this.props.userId+"&problemId="+problemId)
 
         //We get a response after the request is complete
         .then((response) => {
@@ -39,7 +39,6 @@ class ShowMatches extends React.Component {
                 <Table striped>
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Problem</th>
                             <th>Answer</th>
                             <th></th>
@@ -49,10 +48,9 @@ class ShowMatches extends React.Component {
                         {
                             this.props.matches.map((question, id) => (
                                 <tr key={id}>
-                                    <th>{question.problemId}</th>
                                     <td>{question.problem}</td>
                                     <td>{question.answer}</td>
-                                    <Button size="sm" onClick={this.triggerDeleteApi} >Delete</Button>
+                                    <Button size="sm" onClick={()=>this.triggerDeleteApi(question.problemId)} >Delete</Button>
                                 </tr>
                             ))
                         }
