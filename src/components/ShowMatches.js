@@ -33,7 +33,7 @@ class ShowMatches extends React.Component {
     //HTML is shown to the user
     render()
     {
-        if(this.props.matches.length > 0) {
+        if(this.props.matches && this.props.matches.length > 0) {
             return (
                 //This setups a striped table which makes it easier to keep track of
                 <Table striped>
@@ -59,7 +59,7 @@ class ShowMatches extends React.Component {
             );
         }
         else {
-            return <></>
+            return <h1>No correct answers yet</h1>
         }
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Weather.css';
+import '..sstyles/Weather.css';
 import { WiThermometer } from 'react-icons/wi';
 
 function Weather() {
