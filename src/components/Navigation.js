@@ -31,7 +31,10 @@ const Navigation = (props) => {
               <Link className="nav-link" to="/about">About</Link>
             </NavItem>
             <NavItem>
-              <a className="nav-link" href="https://github.com/Codubee/MathSkillsMW3-4-Front" target="_blank" rel="noreferrer">Github</a>
+              <a className="nav-link" href="https://github.com/Codubee/MathSkillsMW3-4-Front" target="_blank" rel="noreferrer">Front Github</a>
+            </NavItem>
+            <NavItem>
+              <a className="nav-link" href="https://github.com/Codubee/MathSkillsMW5-6-Back" target="_blank" rel="noreferrer">Back Github</a>
             </NavItem>
           </Nav>
         </Collapse>
