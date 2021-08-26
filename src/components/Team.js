@@ -44,10 +44,10 @@ function Team() {
     const backEnd = [
         {
             name: "Jason",
-            img: "https://m.media-amazon.com/images/I/61U7aD1GDML._AC_SS450_.jpg",
-            university: "university unknown",
-            level: "level unknown",
-            github: ""
+            img: "https://cdn.discordapp.com/attachments/856640587923062784/880489901378904155/Jason-_headshot.jpg",
+            university: "DePaul University",
+            level: "Junior",
+            github: "https://github.com/Jason-Guzman"
         },
         {
             name: "Jesus",
