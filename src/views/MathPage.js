@@ -58,6 +58,7 @@ class MathPage extends React.Component {
     }
 
     handleNo() {
+        alert('Incorrect');
         this.getProblem();
     }
 
